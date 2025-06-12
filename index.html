@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fórmula Fitness - Sua melhor versão começa aqui</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#FF0000',
+            secondary: '#000000',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .hero {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1532029837206-abbe2b7620e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .trainer-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(255, 0, 0, 0.3);
+    }
+
+    .membership-card:hover {
+      transform: scale(1.03);
+    }
+
+    .nav-link::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background: #FF0000;
+      transition: width .3s;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body class="bg-white font-sans">
+  <!-- Header/Navbar -->
+  <header class="bg-secondary text-white sticky top-0 z-50 shadow-lg">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <img src="/Imagem do WhatsApp de formula à(s) 08.51.53_96d506bd.jpg" width="86" height="16" alt="">
+        <h1 class="text-2xl font-bold">
+          <span class="text-primary">FÓRMULA</span> FITNESS
+        </h1>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+
+      <!-- Desktop Menu -->
+      <nav class="hidden md:flex space-x-8">
+        <a href="#home" class="nav-link hover:text-primary transition">Início</a>
+        <a href="#about" class="nav-link hover:text-primary transition">Sobre</a>
+        <a href="#trainers" class="nav-link hover:text-primary transition">Treinadores</a>
+        <a href="#plans" class="nav-link hover:text-primary transition">Planos</a>
+        <a href="#contact" class="nav-link hover:text-primary transition">Contato</a>
+      </nav>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-secondary pb-4">
+      <div class="flex flex-col space-y-3 px-4">
+        <a href="#home" class="nav-link hover:text-primary transition">Início</a>
+        <a href="#about" class="nav-link hover:text-primary transition">Sobre</a>
+        <a href="#trainers" class="nav-link hover:text-primary transition">Treinadores</a>
+        <a href="#plans" class="nav-link hover:text-primary transition">Planos</a>
+        <a href="#contact" class="nav-link hover:text-primary transition">Contato</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero text-white py-20 md:py-32 flex items-center">
+    <div class="container mx-auto px-4">
+      <div class="max-w-2xl">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">
+          TRANSFORME SEU <span class="text-primary">CORPO</span>, MOLDE SUA <span class="text-primary">MENTE</span>
+        </h1>
+        <p class="text-lg mb-8">
+          Na Fórmula Fitness, nós criamos a combinação perfeita para seus resultados.
+          Musculação de alto nível com acompanhamento profissional personalizado.
+        </p>
+        <button class="bg-primary hover:bg-red-700 text-white font-bold py-3 px-8 rounded transition transform hover:scale-105">
+          COMEÇAR AGORA
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-secondary mb-4">SOBRE A <span class="text-primary">FÓRMULA FITNESS</span></h2>
+        <div class="w-20 h-1 bg-primary mx-auto"></div>
+      </div>
+
+      <div class="flex flex-col md:flex-row items-center gap-8">
+        <div class="md:w-1/2">
+          <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1075&q=80" alt="Academia Fórmula Fitness" class="rounded-lg shadow-2xl w-full h-auto">
+        </div>
+        <div class="md:w-1/2">
+          <h3 class="text-2xl font-bold text-secondary mb-4">A MELHOR ESTRUTURA PARA SEUS RESULTADOS</h3>
+          <p class="text-gray-700 mb-4">
+            Fundada em 2010, a Fórmula Fitness se tornou referência em musculação e condicionamento físico
+            na região. Nossa missão é proporcionar a melhor experiência em treinamento com pesos.
+          </p>
+          <p class="text-gray-700 mb-6">
+            Oferecemos um ambiente
+            exclusivamente focado em resultados. Nossos treinadores são especializados em
+            hipertrofia, força e condicionamento.
+          </p>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="flex items-center">
+              <i class="fas fa-check-circle text-primary text-xl mr-2"></i>
+              <span>Equipamentos ergonômicos</span>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-check-circle text-primary text-xl mr-2"></i>
+              <span>Hipertrofia</span>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-check-circle text-primary text-xl mr-2"></i>
+              <span>Força</span>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-check-circle text-primary text-xl mr-2"></i>
+              <span>Saúde e bem estar</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trainers Section -->
+  <section id="trainers" class="py-16 bg-secondary text-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-primary mb-4">NOSSOS <span class="text-white">TREINADORES</span></h2>
+        <div class="w-20 h-1 bg-primary mx-auto"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Trainer 1 -->
+        <div class="trainer-card bg-gray-800 rounded-lg p-6 shadow-lg transition duration-300">
+          <div class="flex flex-col md:flex-row items-center gap-6">
+            <div class="md:w-1/3">
+              <img src="/1313131313.jpg" alt="Treinador 13" class="rounded-full w-40 h-40 object-cover border-4 border-primary mx-auto">
+            </div>
+            <div class="md:w-2/3">
+              <h3 class="text-2xl font-bold text-primary mb-2">Guilherme 13</h3>
+              <p class="text-gray-300 mb-4">Especialista em Hipertrofia</p>
+              <p class="text-gray-300 mb-4">
+                Com anos de experiência, Guilherme é formado em Educação Física.
+                Atleta e campeão de fisiculturismo támbem prepara atletas de fisiculturismo
+                e ajuda alunos comuns a alcançarem seus objetivos.
+              </p>
+              <div class="flex space-x-4">
+                <a href="https://www.instagram.com/guilherme13torres/"><i class="fab fa-instagram text-primary hover:text-red-300 cursor-pointer text-xl"></i></a>
+                <i class="fab fa-facebook text-primary hover:text-red-300 cursor-pointer text-xl"></i>
+                <i class="fab fa-youtube text-primary hover:text-red-300 cursor-pointer text-xl"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trainer 2 -->
+        <div class="trainer-card bg-gray-800 rounded-lg p-6 shadow-lg transition duration-300">
+          <div class="flex flex-col md:flex-row items-center gap-6">
+            <div class="md:w-1/3">
+              <img src="/Imagem do WhatsApp de 2025-06-10 à(s) 00.58.56_1c8a5f34.jpg" alt="Treinadora Juliana" class="rounded-full w-40 h-40 object-cover border-4 border-primary mx-auto">
+            </div>
+            <div class="md:w-2/3">
+              <h3 class="text-2xl font-bold text-primary mb-2">Gilmar Geno</h3>
+              <p class="text-gray-300 mb-4">Especialista em Hipertrofia e Condicionamento</p>
+              <p class="text-gray-300 mb-4">
+                Gilmar é formado em Educação Física com mestrado em Treinamento Esportivo.
+                Competidor de Bodybuilding e preparador de atletas, traz sua experiência para criar
+                programas de treino eficientes e personalizados.
+              </p>
+              <div class="flex space-x-4">
+                <a href="https://www.instagram.com/gilmargeno/"> <i class="fab fa-instagram text-primary hover:text-red-300 cursor-pointer text-xl"></i></a>
+                <i class="fab fa-linkedin text-primary hover:text-red-300 cursor-pointer text-xl"></i>
+                <i class="fab fa-twitter text-primary hover:text-red-300 cursor-pointer text-xl"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Plans Section -->
+  <section id="plans" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-secondary mb-4">NOSSOS <span class="text-primary">PLANOS</span></h2>
+        <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Escolha o plano que melhor se adapta aos seus objetivos e disponibilidade.
+          Todos incluem acompanhamento dos nossos treinadores.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <!-- Plano 1 -->
+        <div class="membership-card bg-gray-100 rounded-lg overflow-hidden shadow-md transition duration-300">
+          <div class="bg-primary text-white py-4 px-6">
+            <h3 class="text-xl font-bold">MENSAL</h3>
+          </div>
+          <div class="p-6">
+            <div class="text-center mb-6">
+              <span class="text-4xl font-bold text-secondary">R$ 120</span>
+              <span class="text-gray-600">/mês</span>
+            </div>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-primary mr-2"></i>
+                <span>Acesso ilimitado à academia</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-primary mr-2"></i>
+                <span>Horário livre</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-primary mr-2"></i>
+                <span>Avaliação física inicial</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-primary mr-2"></i>
+                <span>Acompanhamento mensal</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-primary mr-2"></i>
+                <span>Área de musculação completa</span>
+              </li>
+            </ul>
+            <button class="w-full bg-secondary hover:bg-black text-white font-bold py-3 px-4 rounded transition">
+              MATRICULE-SE
+            </button>
+          </div>
+        </div>
+
+        <!-- Plano 2 -->
+        <div class="membership-card bg-gray-100 rounded-lg overflow-hidden shadow-md transition duration-300 border-2 border-primary relative">
+          <div class="bg-black text-white py-4 px-6">
+            <h3 class="text-xl font-bold">FÓRMULA MATINAL</h3>
+          </div>
+
+          <div class="p-6">
+            <div class="text-center mb-6">
+              <span class="text-4xl font-bold text-secondary">R$95,00</span>
+              <span class="text-gray-600">/mês</span>
+            </div>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-primary mr-2"></i>
+                <span>Todos os benefícios do Plano Básico</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-primary mr-2"></i>
+                <span>Treinos personalizados</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-primary mr-2"></i>
+                <span>Acompanhamento semanal</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-primary mr-2"></i>
+                <span>Acesso à área VIP</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-primary mr-2"></i>
+                <span>Prioridade nos horários de pico</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-primary mr-2"></i>
+                <span>Programa nutricional básico</span>
+              </li>
+            </ul>
+            <button class="w-full bg-primary hover:bg-red-700 text-white font-bold py-3 px-4 rounded transition">
+              MATRICULE-SE
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-secondary mb-4">FALE <span class="text-primary">CONOSCO</span></h2>
+        <div class="w-20 h-1 bg-primary mx-auto"></div>
+      </div>
+
+      <div class="flex flex-col md:flex-row gap-8 max-w-6xl mx-auto">
+        <div class="md:w-1/2">
+          <form class="space-y-5">
+            <div>
+              <label for="name" class="block text-gray-700 mb-2">Nome</label>
+              <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary">
+            </div>
+            <div>
+              <label for="email" class="block text-gray-700 mb-2">Email</label>
+              <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary">
+            </div>
+            <div>
+              <label for="phone" class="block text-gray-700 mb-2">Telefone</label>
+              <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary">
+            </div>
+            <div>
+              <label for="message" class="block text-gray-700 mb-2">Mensagem</label>
+              <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+            </div>
+            <button type="submit" class="bg-primary hover:bg-red-700 text-white font-bold py-3 px-6 rounded transition">
+              ENVIAR MENSAGEM
+            </button>
+          </form>
+        </div>
+
+        <div class="md:w-1/2">
+          <div class="bg-black text-white rounded-lg p-6 h-full">
+            <h3 class="text-xl font-bold text-primary mb-4">INFORMAÇÕES DE CONTATO</h3>
+
+            <div class="space-y-4">
+              <div class="flex items-start">
+                <i class="fas fa-map-marker-alt text-primary text-xl mr-4 mt-1"></i>
+                <div>
+                  <h4 class="font-bold">ENDEREÇO</h4>
+                  <p class="text-gray-300">Av. Amazonas, 190<br>São Geraldo, Araxá/MG</p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <i class="fas fa-phone text-primary text-xl mr-4 mt-1"></i>
+                <div>
+                  <h4 class="font-bold">TELEFONE</h4>
+                  <p class="text-gray-300">(34) 98765-4321<br>(34) 3456-7890</p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <i class="fas fa-envelope text-primary text-xl mr-4 mt-1"></i>
+                <div>
+                  <h4 class="font-bold">EMAIL</h4>
+                  <p class="text-gray-300">contato@formulafitness.com.br</p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <i class="fas fa-clock text-primary text-xl mr-4 mt-1"></i>
+                <div>
+                  <h4 class="font-bold">HORÁRIO DE FUNCIONAMENTO</h4>
+                  <p class="text-gray-300">
+                    Segunda a Sexta: 5h às 22h<br>
+                    Sábado: 9h às 13h<br>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="py-16 bg-secondary text-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-primary mb-4">O QUE NOSSOS <span class="text-white">ALUNOS DIZEM</span></h2>
+        <div class="w-20 h-1 bg-white mx-auto"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <!-- Testimonial 1 -->
+        <div class="bg-gray-800 p-6 rounded-lg">
+          <div class="flex items-center mb-4">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Aluno João" class="w-12 h-12 rounded-full object-cover mr-4">
+            <div>
+              <h4 class="font-bold">JOÃO CARLOS</h4>
+              <p class="text-gray-300 text-sm">Aluno há 2 anos</p>
+            </div>
+          </div>
+          <p class="text-gray-300 italic">
+            "Em um ano na Fórmula Fitness consegui ganhar 8kg de massa muscular. Os treinadores
+            são extremamente capacitados e a estrutura é impecável. Recomendo para quem quer
+            resultados sérios!"
+          </p>
+          <div class="flex mt-3 text-yellow-400">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="bg-gray-800 p-6 rounded-lg">
+          <div class="flex items-center mb-4">
+            <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Aluna Maria" class="w-12 h-12 rounded-full object-cover mr-4">
+            <div>
+              <h4 class="font-bold">MARIA FERNANDA</h4>
+              <p class="text-gray-300 text-sm">Aluna há 1 ano</p>
+            </div>
+          </div>
+          <p class="text-gray-300 italic">
+            "Depois de tentar várias academias, finalmente encontrei um lugar que entende de
+            verdade sobre musculação feminina. A Julana me ajudou a alcançar um físico que
+            nunca imaginei ser possível. Ambiente motivador e profissional!"
+          </p>
+          <div class="flex mt-3 text-yellow-400">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-20 bg-primary text-white text-center">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">PRONTO PARA TRANSFORMAR SEU CORPO?</h2>
+      <p class="text-xl mb-8 max-w-3xl mx-auto">
+        Agende agora mesmo uma aula experimental gratuita e conheça nossa estrutura.
+      </p>
+      <div class="space-x-4">
+        <button class="bg-secondary hover:bg-black text-white font-bold py-3 px-8 rounded transition">
+          AGENDAR AULA
+        </button>
+        <button class="bg-white hover:bg-gray-200 text-primary font-bold py-3 px-8 rounded transition">
+          FALE CONOSCO
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center space-x-2 mb-4">
+            <i class="fas fa-dumbbell text-primary text-2xl"></i>
+            <h3 class="text-xl font-bold">
+              <span class="text-primary">FÓRMULA</span> FITNESS
+            </h3>
+          </div>
+          <p class="text-gray-400 mb-4">
+            A academia séria para quem busca resultados reais em musculação.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-primary transition"><i class="fab fa-facebook-f text-xl"></i></a>
+            <a href="#" class="text-gray-400 hover:text-primary transition"><i class="fab fa-instagram text-xl"></i></a>
+            <a href="#" class="text-gray-400 hover:text-primary transition"><i class="fab fa-youtube text-xl"></i></a>
+            <a href="#" class="text-gray-400 hover:text-primary transition"><i class="fab fa-whatsapp text-xl"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-bold text-primary mb-4">LINKS ÚTEIS</h4>
+          <ul class="space-y-2">
+            <li><a href="#home" class="text-gray-400 hover:text-white transition">Início</a></li>
+            <li><a href="#about" class="text-gray-400 hover:text-white transition">Sobre Nós</a></li>
+            <li><a href="#trainers" class="text-gray-400 hover:text-white transition">Treinadores</a></li>
+            <li><a href="#plans" class="text-gray-400 hover:text-white transition">Planos</a></li>
+            <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contato</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-bold text-primary mb-4">HORÁRIOS</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li class="flex justify-between">
+              <span>Segunda a Sexta:</span>
+              <span>6h - 23h</span>
+            </li>
+            <li class="flex justify-between">
+              <span>Sábado:</span>
+              <span>8h - 18h</span>
+            </li>
+            <li class="flex justify-between">
+              <span>Domingo:</span>
+              <span>Fechado</span>
+            </li>
+            <li class="flex justify-between">
+              <span>Feriados:</span>
+              <span>9h - 13h</span>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-bold text-primary mb-4">NEWSLETTER</h4>
+          <p class="text-gray-400 mb-4">
+            Assine nossa newsletter e receba dicas exclusivas de treino e nutrição.
+          </p>
+          <div class="flex">
+            <input type="email" placeholder="Seu email" class="px-4 py-2 w-full rounded-l focus:outline-none text-black">
+            <button class="bg-secondary hover:bg-gray-800 px-4 rounded-r">
+              <i class="fas fa-paper-plane text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 mt-10 pt-6 text-center text-gray-500">
+        <p>&copy; 2025 Fórmula Fitness. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="hidden fixed bottom-6 right-6 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-red-700 transition">
+    <i class="fas fa-arrow-up text-xl"></i>
+  </button>
+
+  <script>
+    // Mobile Menu Toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Smooth Scrolling for Anchor Links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+
+        targetElement.scrollIntoView({
+          behavior: 'smooth'
+        });
+
+        // Hide mobile menu after click
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Back to Top Button
+    const backToTopButton = document.getElementById('back-to-top');
+
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTopButton.classList.remove('hidden');
+      } else {
+        backToTopButton.classList.add('hidden');
+      }
+    });
+
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // Animate elements on scroll (simple implementation)
+    const animateOnScroll = function () {
+      const elements = document.querySelectorAll('.trainer-card, .membership-card');
+
+      elements.forEach(element => {
+        const elementPosition = element.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.3;
+
+        if (elementPosition < screenPosition) {
+          element.style.opacity = '1';
+          element.style.transform = 'translateY(0)';
+        }
+      });
+    };
+
+    // Initially set some properties for animation
+    document.querySelectorAll('.trainer-card, .membership-card').forEach(element => {
+      element.style.opacity = '0';
+      element.style.transform = 'translateY(20px)';
+      element.style.transition = 'all 0.5s ease-out';
+    });
+
+    window.addEventListener('scroll', animateOnScroll);
+    // Trigger once on load in case elements are already visible
+    animateOnScroll();
+  </script>
+</body>
+
+</html>
